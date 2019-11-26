@@ -1,6 +1,4 @@
 plugins {
-	id 'org.springframework.boot' version '2.2.1.RELEASE'
-	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
 }
 
@@ -11,17 +9,12 @@ sourceCompatibility = '1.8'
 repositories {
 	mavenCentral()
 	maven {
-		url  "https://devxchange.bintray.com/maven-repo/"
+		url  "https://dl.bintray.com/m2/release/"
 	}
 }
 
 dependencies {
-	implementation("io.devxchange:obfuscator:0.0.2-SNAPSHOT")
-
-	implementation 'org.springframework.boot:spring-boot-starter'
-	testImplementation('org.springframework.boot:spring-boot-starter-test') {
-		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-	}
+	implementation 'io.devxchange:obfuscator:0.0.1'
 }
 
 test {
